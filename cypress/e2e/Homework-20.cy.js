@@ -1,5 +1,5 @@
 import { GetElement } from "../Helpers/Page Objects/GetElement";
-import { HomePage } from "../Helpers/Page Objects/homePage";
+import { HomePage } from "../Helpers/Page Objects/HomePage";
 import { faker } from '@faker-js/faker';
 
 describe('Testing Name field', () => {
