@@ -27,7 +27,7 @@ export class Registration {
         getElement.registrationEmail.click().type(this.#email),
         getElement.registrationPassword.click().type(this.#password),
         getElement.registrationReenterPassword.click().type(this.#password),
-        getElement.registerBtn.click()
+        getElement.registerBtn.should('not.be.disabled').click()
     }
 
     login() {
