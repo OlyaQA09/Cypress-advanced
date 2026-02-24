@@ -33,13 +33,11 @@ describe('Add car', () => {
       expect(response.statusCode).to.eq(201)
       carId = response.body.data.id
       expect(carId).to.exist
-      // Save carId to file so other tests can access it
       cy.writeFile('cypress/fixtures/carId.json', { carId })
     })
   })
 
   it('Check if Audi TT created through the API', () => {
-    // Read carId saved by previous test
     cy.readFile('cypress/fixtures/carId.json').then(({ carId }) => {
       registration.loginAPI()
       cy.request('GET', 'https://qauto.forstudy.space/api/cars').then((response) => {
@@ -69,9 +67,8 @@ describe('Add car', () => {
           expect(response.body.data.carId).to.eq(carId)
           expect(response.body.data.mileage).to.eq(113)
 
-          // Save the reported date for UI check
           cy.writeFile('cypress/fixtures/expenseDate.json', {
-            date: new Date().toLocaleDateString('en-GB') // format: DD/MM/YYYY
+            date: new Date().toLocaleDateString('en-GB')
           })
         })
       })

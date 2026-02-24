@@ -6,14 +6,12 @@ describe('Add car', () => {
   const hw21Elements = new HW21Elements();
   const registration = new Registration('https://qauto2.forstudy.space/');
 
-  // Register once, login before each test to get a clean session
   before(() => {
     registration.register()
   })
 
   beforeEach(() => {
     registration.login()
-    // Wait for the page to be ready before each test
     cy.get('ngb-modal-window').should('not.exist')
   })
 
