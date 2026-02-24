@@ -41,5 +41,6 @@ export class GetElement{
     get loginBtn(){
         return this.#baseElement.getElement('.btn.btn-primary').contains('Login')
     }
+    
 }
 
