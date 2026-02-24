@@ -1,4 +1,4 @@
-import { HomePage } from "../Helpers/Page Objects/homePage";
+import { HomePage } from "../Helpers/Page Objects/HomePage";
 import { GetElement } from "../Helpers/Page Objects/GetElement";
 import { faker } from '@faker-js/faker';
 
